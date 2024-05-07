@@ -1,0 +1,6 @@
+## IDF Component Manager Manifest File
+dependencies:
+  espressif/esp-box-3:
+    path: bsp/esp-box-3
+    git: https://github.com/espressif2022/esp-bsp.git
+    version: feature/update_box3_lcd_driver

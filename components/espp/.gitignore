@@ -1,0 +1,45 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# build folder for ESP-IDF
+build/
+
+# we only version sdkconfig.defaults
+sdkconfig
+sdkconfig.old
+
+# for now we don't care about ESP IDF dependencies
+dependencies.lock
+
+# weird mac folders...
+.DS_Store

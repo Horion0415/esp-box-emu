@@ -1,0 +1,220 @@
+# This is Doxygen configuration file
+#
+# Doxygen provides over 260 configuration statements
+# To make this file easier to follow,
+# it contains only statements that are non-default
+#
+# NOTE:
+# It is recommended not to change defaults unless specifically required
+# Test any changes how they affect generated documentation
+# Make sure that correct warnings are generated to flag issues with documented code
+#
+# For the complete list of configuration statements see:
+# http://doxygen.nl/manual/config.html
+
+FILE_PATTERNS    = *.cpp *.hpp *.md
+
+RECURSIVE = YES
+EXAMPLE_RECURSIVE = YES
+
+PROJECT_NAME = "Espressif++ (ESPP), an ESP C++ Library"
+
+EXAMPLE_PATH =
+EXAMPLE_PATH += $(PROJECT_PATH)/components/adc/example/main/adc_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/ads1x15/example/main/ads1x15_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/ads7138/example/main/ads7138_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/as5600/example/main/as5600_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/aw9523/example/main/aw9523_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/bldc_motor/example/main/bldc_motor_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/bldc_haptics/example/main/bldc_haptics_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/button/example/main/button_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/controller/example/main/controller_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/cli/example/main/cli_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/color/example/main/color_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/csv/example/main/csv_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/display_drivers/example/main/display_drivers_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/drv2605/example/main/drv2605_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/encoder/example/main/encoder_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/event_manager/example/main/event_manager_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/file_system/example/main/file_system_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/filters/example/main/filters_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/ftp/example/main/ftp_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/joystick/example/main/joystick_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/led/example/main/led_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/led_strip/example/main/led_strip_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/logger/example/main/logger_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/math/example/main/math_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/monitor/example/main/monitor_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/mcp23x17/example/main/mcp23x17_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/mt6701/example/main/mt6701_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/pid/example/main/pid_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/rmt/example/main/rmt_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/rtsp/example/main/rtsp_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/serialization/example/main/serialization_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/socket/example/main/socket_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/st25dv/example/main/st25dv_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/state_machine/example/main/hfsm_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/tabulate/example/main/tabulate_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/task/example/main/task_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/thermistor/example/main/thermistor_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/timer/example/main/timer_example.cpp
+EXAMPLE_PATH += $(PROJECT_PATH)/components/wifi/example/main/wifi_example.cpp
+
+## The 'INPUT' statement below is used as input by script 'gen-df-input.py'
+## to automatically generate API reference list files header_file.inc
+## These files are placed in '_inc' directory
+## and used to include in API reference documentation
+
+EXTRACT_ALL = YES
+
+INPUT = $(PROJECT_PATH)/README.md
+INPUT += $(PROJECT_PATH)/components/adc/include/adc_types.hpp
+INPUT += $(PROJECT_PATH)/components/adc/include/oneshot_adc.hpp
+INPUT += $(PROJECT_PATH)/components/adc/include/continuous_adc.hpp
+INPUT += $(PROJECT_PATH)/components/ads1x15/include/ads1x15.hpp
+INPUT += $(PROJECT_PATH)/components/ads7138/include/ads7138.hpp
+INPUT += $(PROJECT_PATH)/components/as5600/include/as5600.hpp
+INPUT += $(PROJECT_PATH)/components/aw9523/include/aw9523.hpp
+INPUT += $(PROJECT_PATH)/components/bldc_driver/include/bldc_driver.hpp
+INPUT += $(PROJECT_PATH)/components/bldc_haptics/include/bldc_haptics.hpp
+INPUT += $(PROJECT_PATH)/components/bldc_haptics/include/detent_config.hpp
+INPUT += $(PROJECT_PATH)/components/bldc_haptics/include/haptic_config.hpp
+INPUT += $(PROJECT_PATH)/components/bldc_motor/include/bldc_motor.hpp
+INPUT += $(PROJECT_PATH)/components/bldc_motor/include/bldc_types.hpp
+INPUT += $(PROJECT_PATH)/components/bldc_motor/include/sensor_direction.hpp
+INPUT += $(PROJECT_PATH)/components/button/include/button.hpp
+INPUT += $(PROJECT_PATH)/components/controller/include/controller.hpp
+INPUT += $(PROJECT_PATH)/components/cli/include/cli.hpp
+INPUT += $(PROJECT_PATH)/components/cli/include/line_input.hpp
+INPUT += $(PROJECT_PATH)/components/color/include/color.hpp
+INPUT += $(PROJECT_PATH)/components/csv/include/csv.hpp
+INPUT += $(PROJECT_PATH)/components/display/include/display.hpp
+INPUT += $(PROJECT_PATH)/components/display_drivers/include/ili9341.hpp
+INPUT += $(PROJECT_PATH)/components/display_drivers/include/st7789.hpp
+INPUT += $(PROJECT_PATH)/components/drv2605/include/drv2605.hpp
+INPUT += $(PROJECT_PATH)/components/encoder/include/abi_encoder.hpp
+INPUT += $(PROJECT_PATH)/components/encoder/include/encoder_types.hpp
+INPUT += $(PROJECT_PATH)/components/event_manager/include/event_manager.hpp
+INPUT += $(PROJECT_PATH)/components/file_system/include/file_system.hpp
+INPUT += $(PROJECT_PATH)/components/filters/include/biquad_filter.hpp
+INPUT += $(PROJECT_PATH)/components/filters/include/butterworth_filter.hpp
+INPUT += $(PROJECT_PATH)/components/filters/include/lowpass_filter.hpp
+INPUT += $(PROJECT_PATH)/components/filters/include/sos_filter.hpp
+INPUT += $(PROJECT_PATH)/components/filters/include/transfer_function.hpp
+INPUT += $(PROJECT_PATH)/components/ftp/include/ftp_server.hpp
+INPUT += $(PROJECT_PATH)/components/ftp/include/ftp_client_session.hpp
+INPUT += $(PROJECT_PATH)/components/input_drivers/include/touchpad_input.hpp
+INPUT += $(PROJECT_PATH)/components/joystick/include/joystick.hpp
+INPUT += $(PROJECT_PATH)/components/led/include/led.hpp
+INPUT += $(PROJECT_PATH)/components/led_strip/include/led_strip.hpp
+INPUT += $(PROJECT_PATH)/components/logger/include/logger.hpp
+INPUT += $(PROJECT_PATH)/components/monitor/include/task_monitor.hpp
+INPUT += $(PROJECT_PATH)/components/math/include/bezier.hpp
+INPUT += $(PROJECT_PATH)/components/math/include/fast_math.hpp
+INPUT += $(PROJECT_PATH)/components/math/include/gaussian.hpp
+INPUT += $(PROJECT_PATH)/components/math/include/range_mapper.hpp
+INPUT += $(PROJECT_PATH)/components/math/include/vector2d.hpp
+INPUT += $(PROJECT_PATH)/components/ndef/include/ndef.hpp
+INPUT += $(PROJECT_PATH)/components/mcp23x17/include/mcp23x17.hpp
+INPUT += $(PROJECT_PATH)/components/mt6701/include/mt6701.hpp
+INPUT += $(PROJECT_PATH)/components/pid/include/pid.hpp
+INPUT += $(PROJECT_PATH)/components/rmt/include/rmt.hpp
+INPUT += $(PROJECT_PATH)/components/rmt/include/rmt_encoder.hpp
+INPUT += $(PROJECT_PATH)/components/rtsp/include/rtsp_client.hpp
+INPUT += $(PROJECT_PATH)/components/rtsp/include/rtsp_server.hpp
+INPUT += $(PROJECT_PATH)/components/rtsp/include/rtsp_session.hpp
+INPUT += $(PROJECT_PATH)/components/rtsp/include/rtcp_packet.hpp
+INPUT += $(PROJECT_PATH)/components/rtsp/include/rtp_packet.hpp
+INPUT += $(PROJECT_PATH)/components/rtsp/include/rtp_jpeg_packet.hpp
+INPUT += $(PROJECT_PATH)/components/rtsp/include/jpeg_frame.hpp
+INPUT += $(PROJECT_PATH)/components/rtsp/include/jpeg_header.hpp
+INPUT += $(PROJECT_PATH)/components/serialization/include/serialization.hpp
+INPUT += $(PROJECT_PATH)/components/socket/include/socket.hpp
+INPUT += $(PROJECT_PATH)/components/socket/include/udp_socket.hpp
+INPUT += $(PROJECT_PATH)/components/socket/include/tcp_socket.hpp
+INPUT += $(PROJECT_PATH)/components/st25dv/include/st25dv.hpp
+INPUT += $(PROJECT_PATH)/components/state_machine/include/deep_history_state.hpp
+INPUT += $(PROJECT_PATH)/components/state_machine/include/shallow_history_state.hpp
+INPUT += $(PROJECT_PATH)/components/state_machine/include/state_base.hpp
+INPUT += $(PROJECT_PATH)/components/state_machine/include/state_machine.hpp
+INPUT += $(PROJECT_PATH)/components/tabulate/include/tabulate.hpp
+INPUT += $(PROJECT_PATH)/components/task/include/task.hpp
+INPUT += $(PROJECT_PATH)/components/thermistor/include/thermistor.hpp
+INPUT += $(PROJECT_PATH)/components/timer/include/timer.hpp
+INPUT += $(PROJECT_PATH)/components/wifi/include/wifi_ap.hpp
+INPUT += $(PROJECT_PATH)/components/wifi/include/wifi_sta.hpp
+
+USE_MDFILE_AS_MAINPAGE = $(PROJECT_PATH)/README.md
+
+## Get warnings for functions that have no documentation for their parameters or return value
+##
+WARN_NO_PARAMDOC = YES
+
+## Ignore duplicate c++ declaration documentation and other spurious warnings?
+##
+WARN_IF_DOC_ERROR = NO
+
+## Enable preprocessing and remove __attribute__(...) expressions from the INPUT files
+##
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+EXPAND_ONLY_PREDEF     = YES
+PREDEFINED             = \
+    $(ENV_DOXYGEN_DEFINES)
+
+## Generate XML that is required for Breathe
+##
+GENERATE_XML    = YES
+XML_OUTPUT      = xml
+
+GENERATE_HTML   = NO
+HAVE_DOT        = NO
+GENERATE_LATEX  = YES
+GENERATE_MAN    = YES
+GENERATE_RTF    = NO
+
+## Skip distracting progress messages
+##
+QUIET = YES
+
+INLINE_SOURCES = YES
+
+# If the INLINE_INHERITED_MEMB tag is set to YES, doxygen will show all
+# inherited members of a class in the documentation of that class as if those
+# members were ordinary class members. Constructors, destructors and assignment
+# operators of the base classes will not be shown.
+# The default value is: NO.
+
+INLINE_INHERITED_MEMB  = YES
+
+# If the INHERIT_DOCS tag is set to YES then an undocumented member inherits the
+# documentation from any documented member that it re-implements.
+# The default value is: YES.
+
+INHERIT_DOCS           = YES
+
+# When the INLINE_SIMPLE_STRUCTS tag is set to YES, structs, classes, and unions
+# with only public data fields or simple typedef fields will be shown inline in
+# the documentation of the scope in which they are defined (i.e. file,
+# namespace, or group documentation), provided this scope is documented. If set
+# to NO, structs, classes, and unions are shown on a separate page (for HTML and
+# Man pages) or section (for LaTeX and RTF).
+# The default value is: NO.
+
+INLINE_SIMPLE_STRUCTS  = YES
+
+# If the EXTRACT_ALL tag is set to YES doxygen will assume all entities in
+# documentation are documented, even if no documentation was available. Private
+# class members and static file members will be hidden unless the
+# EXTRACT_PRIVATE respectively EXTRACT_STATIC tags are set to YES.
+# Note: This will also disable the warnings about undocumented members that are
+# normally produced when WARNINGS is set to YES.
+# The default value is: NO.
+
+EXTRACT_ALL            = YES
+EXTRACT_STATIC         = YES
+SHOW_NAMESPACES        = YES
+SHOW_FILES             = YES
+BUILTIN_STL_SUPPORT    = YES
+HIDE_SCOPE_NAMES       = NO
+MARKDOWN_SUPPORT       = YES

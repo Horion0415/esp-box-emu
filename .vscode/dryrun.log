@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/lvhaiyu/old_PC/lvhaiyu/esp-box-emu'
+make: Leaving directory '/home/lvhaiyu/old_PC/lvhaiyu/esp-box-emu'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

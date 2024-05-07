@@ -1,0 +1,11 @@
+description: ESP-BSP SquareLine LVGL Example
+targets:
+    - esp32s3
+dependencies:
+  chmorgan/esp-audio-player: "1.0.5"
+  joltwallet/littlefs: "^1.10.2"
+  lvgl/lvgl:
+    public: true
+    version: =8.3.10
+  espressif/esp-dsp: "^1.4.8"
+  idf: ">=4.4"

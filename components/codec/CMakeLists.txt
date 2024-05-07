@@ -1,0 +1,11 @@
+idf_component_register(
+    SRC_DIRS
+        "es7210"
+        "es8311"
+    INCLUDE_DIRS
+        "es7210"
+        "es8311"
+        "include"
+    REQUIRES
+        driver
+        )

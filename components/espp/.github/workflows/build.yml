@@ -1,0 +1,32 @@
+name: Build
+
+on: [pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    continue-on-error: true
+
+    strategy:
+      matrix:
+        test:
+        - path: 'components/event_manager/example'
+          target: esp32
+        - path: 'components/logger/example'
+          target: esp32
+        - path: 'components/task/example'
+          target: esp32
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+      with:
+        submodules: 'recursive'
+
+    - name: Build Examples
+      uses: espressif/esp-idf-ci-action@v1
+      with:
+        esp_idf_version: release-v5.0
+        target: ${{ matrix.test.target }}
+        path: ${{ matrix.test.path }}
